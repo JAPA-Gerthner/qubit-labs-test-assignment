@@ -2,15 +2,15 @@
 
 ![Vue](https://img.shields.io/badge/Vue-3.4-4FC08D?logo=vue.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript)
-[![Deploy](https://github.com/JAPA-Gerthner/qubit-labs-test-test-assignment/actions/workflows/deploy.yml/badge.svg)](https://github.com/JAPA-Gerthner/qubit-labs-test-test-assignment/actions/workflows/deploy.yml)
-[![Coverage Status](https://coveralls.io/repos/github/JAPA-Gerthner/qubit-labs-test-test-assignment/badge.svg?branch=master)](https://coveralls.io/github/JAPA-Gerthner/qubit-labs-test-test-assignment?branch=master)
+[![Deploy](https://github.com/JAPA-Gerthner/qubit-labs-test-assignment/actions/workflows/deploy.yml/badge.svg)](https://github.com/JAPA-Gerthner/qubit-labs-test-assignment/actions/workflows/deploy.yml)
+[![Coverage Status](https://coveralls.io/repos/github/JAPA-Gerthner/qubit-labs-test-assignment/badge.svg?branch=master)](https://coveralls.io/github/JAPA-Gerthner/qubit-labs-test-assignment?branch=master)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
 An interactive horse racing simulation built with Vue 3 and TypeScript, following enterprise architecture patterns.
 
 ## Live Demo
 
-https://japa-gerthner.github.io/qubit-labs-test-test-assignment/
+https://japa-gerthner.github.io/qubit-labs-test-assignment/
 
 ## Features
 
