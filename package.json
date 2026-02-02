@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:coverage": "vitest --coverage",
+    "test:e2e": "playwright test",
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
@@ -18,6 +19,7 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
     "@tailwindcss/postcss": "^4.1.18",
     "@tsconfig/node20": "^20.1.0",
     "@types/node": "^20.11.0",

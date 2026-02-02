@@ -27,6 +27,7 @@ const toggleRace = () => {
     <div class="flex gap-4">
       <button
         class="px-4 py-2 bg-gray-700 text-white font-bold hover:bg-gray-800"
+        data-testid="generate-btn"
         @click="generateProgram"
       >
         GENERATE PROGRAM
@@ -35,6 +36,7 @@ const toggleRace = () => {
         class="px-4 py-2 text-white font-bold disabled:opacity-50"
         :class="isRunning ? 'bg-red-600 hover:bg-red-700' : 'bg-green-600 hover:bg-green-700'"
         :disabled="!hasRaces"
+        data-testid="start-pause-btn"
         @click="toggleRace"
       >
         {{ isRunning ? 'PAUSE' : 'START' }}

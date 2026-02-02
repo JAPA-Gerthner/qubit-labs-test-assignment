@@ -36,6 +36,7 @@ const getHorsePosition = (position: number, trackLength: number) => {
           <div
             class="absolute text-2xl transition-all duration-100 ease-in-out"
             :style="{ left: getHorsePosition(runningHorse.position, currentRace.length) }"
+            data-testid="race-horse"
           >
             🐎
           </div>
