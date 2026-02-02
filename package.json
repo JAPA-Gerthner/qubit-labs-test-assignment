@@ -12,6 +12,8 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.2.0",
+    "reflect-metadata": "^0.2.2",
     "vue": "^3.4.0"
   },
   "devDependencies": {
