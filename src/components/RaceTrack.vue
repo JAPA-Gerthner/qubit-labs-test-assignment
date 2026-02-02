@@ -33,9 +33,21 @@ const getHorsePosition = (position: number, trackLength: number) => {
           {{ index + 1 }}
         </div>
         <div class="flex-1 relative">
+          <!-- Name sign -->
+          <div
+            class="absolute -top-3 px-1 text-xs bg-white border border-black whitespace-nowrap transition-all duration-100 ease-in-out"
+            :style="{ left: getHorsePosition(runningHorse.position, currentRace.length), zIndex: 5 }"
+          >
+            {{ runningHorse.horse.name }}
+          </div>
+          <!-- Horse -->
           <div
             class="absolute text-2xl transition-all duration-100 ease-in-out"
-            :style="{ left: getHorsePosition(runningHorse.position, currentRace.length) }"
+            :style="{
+              left: getHorsePosition(runningHorse.position, currentRace.length),
+              zIndex: 10,
+              filter: `drop-shadow(0 0 3px ${runningHorse.horse.color})`
+            }"
             data-testid="race-horse"
           >
             🐎
