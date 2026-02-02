@@ -14,7 +14,8 @@
   "dependencies": {
     "@faker-js/faker": "^10.2.0",
     "reflect-metadata": "^0.2.2",
-    "vue": "^3.4.0"
+    "vue": "^3.4.0",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",

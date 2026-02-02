@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useStore } from 'vuex';
+import { Getters } from '@/store/types';
+
+const store = useStore();
+const horses = computed(() => store.getters[Getters.HORSES]);
 </script>
 
 <template>
@@ -15,21 +21,19 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Placeholder rows -->
-        <tr class="border-b border-gray-200">
-          <td class="px-2 py-1">Ada Lovelace</td>
-          <td class="px-2 py-1">80</td>
-          <td class="px-2 py-1">Red</td>
-        </tr>
-        <tr class="border-b border-gray-200">
-          <td class="px-2 py-1">Grace Hopper</td>
-          <td class="px-2 py-1">45</td>
-          <td class="px-2 py-1">Blue</td>
-        </tr>
-        <tr class="border-b border-gray-200">
-          <td class="px-2 py-1">Margaret Hamilton</td>
-          <td class="px-2 py-1">60</td>
-          <td class="px-2 py-1">Yellow</td>
+        <tr
+          v-for="horse in horses"
+          :key="horse.id"
+          class="border-b border-gray-200"
+        >
+          <td class="px-2 py-1">{{ horse.name }}</td>
+          <td class="px-2 py-1">{{ horse.condition }}</td>
+          <td class="px-2 py-1">
+            <span
+              class="inline-block w-4 h-4 rounded"
+              :style="{ backgroundColor: horse.color }"
+            ></span>
+          </td>
         </tr>
       </tbody>
     </table>

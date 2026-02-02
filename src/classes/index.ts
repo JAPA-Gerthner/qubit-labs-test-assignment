@@ -1,3 +1,4 @@
 export { Horse } from './Horse.class';
 export { RunningHorse } from './RunningHorse.class';
-export { Hippodrome } from './Hippodrome.class';
+export { Race } from './Race.class';
+export { Game } from './Game.class';

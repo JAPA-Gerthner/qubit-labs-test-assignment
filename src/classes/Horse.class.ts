@@ -3,6 +3,9 @@ import { Mock, EnableMocks } from '@/utilities/decorators/Mock.decorator';
 
 @EnableMocks
 export class Horse {
+  @Mock(() => faker.string.uuid())
+  id!: string;
+
   @Mock(() => faker.person.firstName())
   name!: string;
 
