@@ -1,37 +1,35 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderBar from './components/HeaderBar.vue'
+import HorseList from './components/HorseList.vue'
+import RaceTrack from './components/RaceTrack.vue'
+import ProgramPanel from './components/ProgramPanel.vue'
+import ResultsPanel from './components/ResultsPanel.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+  <div class="min-h-screen flex flex-col">
+    <HeaderBar />
+
+    <main class="flex-1 flex gap-4 p-4">
+      <!-- Left sidebar - Horse List -->
+      <div class="w-64 shrink-0">
+        <HorseList />
+      </div>
+
+      <!-- Center - Race Track -->
+      <div class="flex-1">
+        <RaceTrack />
+      </div>
+
+      <!-- Right sidebar - Program & Results -->
+      <div class="w-80 shrink-0 flex gap-2">
+        <div class="flex-1">
+          <ProgramPanel />
+        </div>
+        <div class="flex-1">
+          <ResultsPanel />
+        </div>
+      </div>
+    </main>
+  </div>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
