@@ -101,6 +101,7 @@ export class StartRaceCommand {
    */
   private async handleRaceComplete(): Promise<Result<void, RaceNotFoundError>> {
     this.clearInterval();
+    this.stateStore.setIsRunning(false);
 
     // Try to advance to next race
     const hasNextRace = this.stateStore.advanceToNextRace();
@@ -111,7 +112,6 @@ export class StartRaceCommand {
     }
 
     // All races complete
-    this.stateStore.setIsRunning(false);
     return ok(undefined);
   }
 
