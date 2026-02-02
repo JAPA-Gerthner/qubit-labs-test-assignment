@@ -18,10 +18,14 @@ export function Mock<T>(generator: () => T): PropertyDecorator {
   };
 }
 
-export function EnableMocks<T extends new (...args: any[]) => object>(
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function EnableMocks<T extends new (...args: unknown[]) => object>(
   constructor: T
 ): T {
-  return class extends constructor {
+  // Using 'any' here is necessary for decorator class extension pattern
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return class extends (constructor as new (...args: any[]) => object) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     constructor(...args: any[]) {
       super(...args);
 

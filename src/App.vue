@@ -1,8 +1,12 @@
 <script setup lang="ts">
-import HeaderBar from './components/HeaderBar.vue'
-import HorseList from './components/HorseList.vue'
-import RaceTrack from './components/RaceTrack.vue'
-import ResultsPanel from './components/ResultsPanel.vue'
+import { provideContainer } from '@/presentation/composables';
+import HeaderBar from '@/presentation/components/HeaderBar.vue';
+import HorseList from '@/presentation/components/HorseList.vue';
+import RaceTrack from '@/presentation/components/RaceTrack.vue';
+import ResultsPanel from '@/presentation/components/ResultsPanel.vue';
+
+// Provide the DI container to all child components
+provideContainer();
 </script>
 
 <template>
