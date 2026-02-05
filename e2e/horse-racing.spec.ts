@@ -65,10 +65,7 @@ test.describe('Horse Racing Game', () => {
     await page.getByTestId('generate-btn').click();
     await page.getByTestId('start-pause-btn').click();
 
-    await page.waitForTimeout(3000);
-
-    const firstResult = await page.getByTestId('result-name-1-1').textContent();
-
-    expect(firstResult).not.toBe('-');
+    const resultCell = page.getByTestId('result-name-1-1');
+    await expect(resultCell).not.toHaveText('-', { timeout: 15000 });
   });
 });
